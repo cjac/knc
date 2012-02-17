@@ -419,6 +419,9 @@ Author(s) of Authen::Krb5: L<https://metacpan.org/module/Authen::Krb5>
 
 Copyright 2012 Ryan Corder, All Rights Reserved.
 
+All bugs Copyright 2012 C.J. Adams-Collier.  I'll take the rights Ryan
+doesn't reserve.
+
 This program is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
 

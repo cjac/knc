@@ -1,71 +1,77 @@
-NAME
-    knc.pl - Eventual OpenBSD netcat clone with Kerberos support.
+KNC(1)                User Contributed Perl Documentation               KNC(1)
 
-VERSION
-    This README refers to knc.pl version 0.001.
 
-USAGE
-    Simple server:
 
-        knc.pl -l 127.0.0.1 12345
+NNAAMMEE
+       knc.pl - Eventual OpenBSD netcat clone with Kerberos support.
 
-    Simple client:
+VVEERRSSIIOONN
+       This README refers to knc.pl version 0.001.
 
-        knc.pl 127.0.0.1 12345
+UUSSAAGGEE
+       Simple server:
 
-    Kerberized server:
+           knc.pl -l 127.0.0.1 12345
 
-        knc.pl -l -K -N example -T /opt/etc/krb5.keytab 127.0.0.1 12345
+       Simple client:
 
-    Kerberized client:
+           knc.pl 127.0.0.1 12345
 
-        kinit -f (You will need a TGT from your KDC first)
-        knc.pl -K -N example 127.0.0.1 12345
+       Kerberized server:
 
-REQUIRED ARGUMENTS
-    The Hostname/IP address and Port of the host you either want to connect
-    to or listen on are required.
+           knc.pl -l -K -N example -T /opt/etc/krb5.keytab 127.0.0.1 12345
 
-OPTIONS
-    Run the program with the '--help' swith for alist of all available
-    options.
+       Kerberized client:
 
-DESCRIPTION
-    knc.pl aims to be a full clone of netcat that comes with OpenBSD.
-    Additionally, knc.pl supports Kerberos authentication in both client and
-    server modes.
+           kinit -f (You will need a TGT from your KDC first)
+           knc.pl -K -N example 127.0.0.1 12345
 
-    As of this release, features are few.
+RREEQQUUIIRREEDD AARRGGUUMMEENNTTSS
+       The Hostname/IP address and Port of the host you either want to connect
+       to or listen on are required.
 
-    For more information on OpenBSD's netcat, please see the current manual
-    at <http://www.openbsd.org/cgi-bin/man.cgi?query=nc>
+OOPPTTIIOONNSS
+       Run the program with the '--help' swith for alist of all available
+       options.
 
-AUTHOR
-    Ryan Corder, "ryanc at greengrey.org"
+DDEESSCCRRIIPPTTIIOONN
+       knc.pl aims to be a full clone of netcat that comes with OpenBSD.
+       Additionally, knc.pl supports Kerberos authentication in both client
+       and server modes.
 
-BUGS AND LIMITATIONS
-    Many of the features/switches from OpenBSD's netcat are not yet
-    implemented.
+       As of this release, features are few.
 
-    If the Server is in Kerberos mode, but the Client is not and the client
-    connects, the server does not immediately close the connection.
+       For more information on OpenBSD's netcat, please see the current manual
+       at http://www.openbsd.org/cgi-bin/man.cgi?query=nc
+       <http://www.openbsd.org/cgi-bin/man.cgi?query=nc>
 
-ACKNOWLEDGEMENTS
-    The OpenBSD project: <http://www.openbsd.org>
+AAUUTTHHOORR
+       Ryan Corder, "ryanc at greengrey.org"
 
-    Author(s) of the AnyEvent framework:
-    <https://metacpan.org/release/AnyEvent>
+BBUUGGSS AANNDD LLIIMMIITTAATTIIOONNSS
+       Many of the features/switches from OpenBSD's netcat are not yet
+       implemented.
 
-    Author(s) of Authen::Krb5: <https://metacpan.org/module/Authen::Krb5>
+       If the Server is in Kerberos mode, but the Client is not and the client
+       connects, the server does not immediately close the connection.
 
-LICENSE AND COPYRIGHT
-    Copyright 2012 Ryan corder, All Rights Reserved.
+AACCKKNNOOWWLLEEDDGGEEMMEENNTTSS
+       The OpenBSD project: <http://www.openbsd.org>
 
-    This program is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+       Author(s) of the AnyEvent framework:
+       <https://metacpan.org/release/AnyEvent>
 
-DIAGNOSTICS
-CONFIGURATION
-DEPENDENCIES
-INCOMPATIBILITIES
-EXIT STATUS
+       Author(s) of Authen::Krb5: <https://metacpan.org/module/Authen::Krb5>
+
+LLIICCEENNSSEE AANNDD CCOOPPYYRRIIGGHHTT
+       Copyright 2012 Ryan Corder, All Rights Reserved.
+
+       This program is free software; you can redistribute it and/or modify it
+       under the same terms as Perl itself.
+
+DDIIAAGGNNOOSSTTIICCSS
+CCOONNFFIIGGUURRAATTIIOONN
+DDEEPPEENNDDEENNCCIIEESS
+IINNCCOOMMPPAATTIIBBIILLIITTIIEESS
+EEXXIITT SSTTAATTUUSS
+perl v5.14.2                      2012-02-17                            KNC(1)
